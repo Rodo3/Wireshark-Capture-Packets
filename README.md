@@ -20,12 +20,26 @@ Acquired proficiency in utilizing Wireshark, a leading network protocol analyzer
 - Mozilla Firefox
 
 ## Steps
-Problem: Run a custom scan that only scans the files in the Downloads folder.
+Problem: Use wireshark to create a capture file and then use a display filter to list all https and http packets.
+You will then eliminate one I.P. Address from the capture using a display filter.
 
 
-
-Every screenshot should have some text explaining what the screenshot is about.
-
-Example below.
-
-*Ref 1: Network Diagram*
+<p align="center">
+Start a packet capture on the ethernet in wireshark. Visit google, duck duck go and http.cygwin.com.  
+<br/>
+<img src="https://i.imgur.com/tKocPI6.png" height="80%" width="80%"/>
+<br/>
+<br/>
+<img src="https://i.imgur.com/ZEJkAVH.png" height="80%" width="80%"/>
+<br/>
+<br/>
+Stop the packet capture in wire shark and save the capture to a file. Then created a filter to just display port 80 TCP data. This should show the I.P. Address of Cygwin.  
+<br/>
+<img src="https://i.imgur.com/BHpGaL4.png" height="80%" width="80%"/>
+<br/>
+<br/>
+Created a filter to display only http and https packets and Eliminate the Cygwin site visits from the displayed packets
+<br/>
+<img src="https://i.imgur.com/USTdLt3.png" height="80%" width="80%"/>
+<br/>
+<br/>
