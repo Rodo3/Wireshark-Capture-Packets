@@ -1,45 +1,27 @@
-# Wireshark-Capture-Packets
+# Intelligent Driving System for Agricultural Vehicles
 
-## Objective
+## What?
+The **Intelligent Driving System for Agricultural Vehicles** is designed to enhance automation in agricultural machinery, focusing on improving precision, safety, and efficiency in farming operations. Developed in collaboration with John Deere, the system integrates embedded computing, real-time processing, and automation to assist or autonomously operate tractors in agricultural tasks.<br><br>
 
-Acquired proficiency in utilizing Wireshark, a leading network protocol analyzer, for capturing, analyzing, and interpreting network traffic data. Developed the ability to troubleshoot network issues, identify security threats, and optimize network performance through hands-on experience with packet capture and analysis techniques. Demonstrated competency in protocol decoding, session reconstruction, and statistical analysis, enhancing capabilities in network monitoring, optimization, and security analysis.
+## How?
+The system is built around an **STM32 microcontroller**, which serves as the core processing unit for collecting, analyzing, and transmitting data. Using **RTOS (Real-Time Operating System)**, tasks such as sensor data processing, motor control, and communication are managed efficiently, ensuring precise execution of operations.<br><br>
 
+The system employs multiple input devices, including **potentiometers, a matrix keypad, and push buttons**, which act as controls for managing the tractor’s movements and functions. A **display LCD** provides real-time feedback, showing important parameters such as speed, position, and operational status.<br><br>
 
-### Skills Learned
+For data visualization, a **Raspberry Pi 4** is integrated to process and display historical and real-time data. The Raspberry Pi receives information via **serial communication** from the STM32 and utilizes **Python-based visualization tools (Matplotlib, Tkinter, Pandas, Seaborn)** to present insights on tractor performance.<br><br>
 
-- Install and set up Wireshark on Linux.
-- Capture and save packets on a detected network using Wireshark.
-- Use a display filter to observe certain packet protocols.
-- Employ a display filter to detect a certain IP address in a capture.
-- Use a conditional filter to locate certain packets in a capture.
+To ensure efficient hardware interaction, the **STM32 microcontroller** makes use of **UART for serial communication, GPIO for sensor interfacing, and ADC for precise analog data acquisition**. The system is programmed in **C and Python** using **STM32 IDE**, and communication with external systems is managed using **Putty and VNC Viewer** for remote monitoring and control.<br><br>
 
-### Tools Used
+### Implementation Phases
+- **Conceptualization**: Reviewing John Deere’s requirements and defining system architecture.<br>
+- **Prototyping**: Developing individual modules, testing hardware components, and verifying data collection methods.<br>
+- **Final Implementation**: Integrating all modules into a fully functional system with real-time data processing and control mechanisms.<br><br>
 
-- Wireshark
-- Tcpdump
-- Mozilla Firefox
+## Results
+- **Increased Precision**: The system ensures accurate depth and spacing in seed planting, optimizing crop yield.<br>
+- **Enhanced Safety**: Automating certain tasks reduces operator fatigue and exposure to harsh environmental conditions.<br>
+- **Improved Efficiency**: The real-time monitoring and control system streamlines agricultural operations, reducing human intervention.<br>
+- **Scalability**: The modular design allows for future enhancements, such as AI-based decision-making and additional sensor integration.<br><br>
 
-## Steps
-Problem: Use wireshark to create a capture file and then use a display filter to list all https and http packets.
-You will then eliminate one I.P. Address from the capture using a display filter.
+This project represents a significant advancement in **agricultural automation**, showcasing how embedded systems and real-time computing can optimize farming efficiency while ensuring sustainability and safety.
 
-
-<p align="center">
-Start a packet capture on the ethernet in wireshark. Visit google, duck duck go and http.cygwin.com.  
-<br/>
-<img src="https://i.imgur.com/tKocPI6.png" height="80%" width="80%"/>
-<br/>
-<br/>
-<img src="https://i.imgur.com/ZEJkAVH.png" height="80%" width="80%"/>
-<br/>
-<br/>
-Stop the packet capture in wire shark and save the capture to a file. Then created a filter to just display port 80 TCP data. This should show the I.P. Address of Cygwin.  
-<br/>
-<img src="https://i.imgur.com/BHpGaL4.png" height="80%" width="80%"/>
-<br/>
-<br/>
-Created a filter to display only http and https packets and Eliminate the Cygwin site visits from the displayed packets
-<br/>
-<img src="https://i.imgur.com/USTdLt3.png" height="80%" width="80%"/>
-<br/>
-<br/>
